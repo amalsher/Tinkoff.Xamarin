@@ -1,0 +1,7 @@
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "com.google.gson", Managed="Com.Google.Gson")]
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "com.google.gson.annotations", Managed="Com.Google.Gson.Annotations")]
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "com.google.gson.internal", Managed="Com.Google.Gson.Internal")]
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "com.google.gson.internal.bind", Managed="Com.Google.Gson.Internal.Bind")]
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "com.google.gson.internal.bind.util", Managed="Com.Google.Gson.Internal.Bind.Util")]
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "com.google.gson.reflect", Managed="Com.Google.Gson.Reflect")]
+[assembly:global::Android.Runtime.NamespaceMapping (Java = "com.google.gson.stream", Managed="Com.Google.Gson.Stream")]

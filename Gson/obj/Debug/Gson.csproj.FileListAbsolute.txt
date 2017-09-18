@@ -1,0 +1,5 @@
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Gson\bin\Debug\Gson.dll
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Gson\bin\Debug\Gson.pdb
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Gson\obj\Debug\Gson.csproj.CoreCompileInputs.cache
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Gson\obj\Debug\Gson.dll
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Gson\obj\Debug\Gson.pdb

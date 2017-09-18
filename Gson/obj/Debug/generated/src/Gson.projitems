@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25</DefineConstants>
+  </PropertyGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Annotations.ExposeAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Annotations.IExpose.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Annotations.IJsonAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Annotations.ISerializedName.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Annotations.ISince.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Annotations.IUntil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Annotations.JsonAdapterAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Annotations.SerializedNameAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Annotations.SinceAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Annotations.UntilAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.FieldAttributes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.FieldNamingPolicy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Gson.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.GsonBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.IExclusionStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.IFieldNamingStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.IInstanceCreator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.IJsonDeserializationContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.IJsonDeserializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.IJsonSerializationContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.IJsonSerializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Bind.ArrayTypeAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Bind.CollectionTypeAdapterFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Bind.JsonAdapterAnnotationTypeAdapterFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Bind.JsonTreeReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Bind.JsonTreeWriter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Bind.MapTypeAdapterFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Bind.ObjectTypeAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Bind.ReflectiveTypeAdapterFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Bind.TypeAdapters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Bind.Util.ISO8601Utils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.ConstructorConstructor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Excluder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.IObjectConstructor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.JsonReaderInternalAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.LazilyParsedNumber.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Primitives.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.Streams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Internal.UnsafeAllocator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.ITypeAdapterFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.JsonArray.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.JsonElement.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.JsonIOException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.JsonNull.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.JsonObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.JsonParseException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.JsonParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.JsonPrimitive.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.JsonSyntaxException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.LongSerializationPolicy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Reflect.TypeToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Stream.JsonReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Stream.JsonToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Stream.JsonWriter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.Stream.MalformedJsonException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Google.Gson.TypeAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <!-- Enums -->
+  <ItemGroup />
+</Project>

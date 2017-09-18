@@ -1,0 +1,8 @@
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.Core\bin\Debug\Tinkoff.Core.dll
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.Core\bin\Debug\Tinkoff.Core.pdb
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.Core\bin\Debug\Gson.dll
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.Core\bin\Debug\Gson.pdb
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.Core\obj\Debug\Tinkoff.Core.csprojResolveAssemblyReference.cache
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.Core\obj\Debug\Tinkoff.Core.csproj.CoreCompileInputs.cache
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.Core\obj\Debug\Tinkoff.Core.dll
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.Core\obj\Debug\Tinkoff.Core.pdb

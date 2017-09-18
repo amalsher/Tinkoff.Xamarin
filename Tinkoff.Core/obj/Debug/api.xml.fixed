@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+  <package name="ru.tinkoff.acquiring.sdk">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AcquiringApi" static="false" visibility="public">
+      <field deprecated="not deprecated" final="true" name="API_REQUEST_METHOD" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;POST&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" final="false" name="AcquiringApiException" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="AcquiringApiException" static="false" type="ru.tinkoff.acquiring.sdk.AcquiringApiException" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="AcquiringApiException" static="false" type="ru.tinkoff.acquiring.sdk.AcquiringApiException" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="AcquiringApiException" static="false" type="ru.tinkoff.acquiring.sdk.AcquiringApiException" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.Throwable">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="AcquiringApiException" static="false" type="ru.tinkoff.acquiring.sdk.AcquiringApiException" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse">
+        </parameter>
+        <parameter name="p2" type="java.lang.Throwable">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getResponse" native="false" return="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.Journal" extends-generic-aware="ru.tinkoff.acquiring.sdk.Journal" final="false" name="AcquiringSdk" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="AcquiringSdk" static="false" type="ru.tinkoff.acquiring.sdk.AcquiringSdk" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="ru.tinkoff.acquiring.sdk.KeyCreator">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="AcquiringSdk" static="false" type="ru.tinkoff.acquiring.sdk.AcquiringSdk" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="AcquiringSdk" static="false" type="ru.tinkoff.acquiring.sdk.AcquiringSdk" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.security.PublicKey">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="charge" native="false" return="ru.tinkoff.acquiring.sdk.PaymentInfo" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long">
+        </parameter>
+        <parameter name="p1" type="long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="finishAuthorize" native="false" return="ru.tinkoff.acquiring.sdk.ThreeDsData" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long">
+        </parameter>
+        <parameter name="p1" type="ru.tinkoff.acquiring.sdk.CardData">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardList" native="false" return="ru.tinkoff.acquiring.sdk.Card[]" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPassword" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPublicKey" native="false" return="java.security.PublicKey" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getState" native="false" return="ru.tinkoff.acquiring.sdk.PaymentStatus" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTerminalKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUrl" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="init" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.Money">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+        <parameter name="p3" type="java.lang.String">
+        </parameter>
+        <parameter name="p4" type="java.lang.String">
+        </parameter>
+        <parameter name="p5" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="init" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.Money">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+        <parameter name="p3" type="java.lang.String">
+        </parameter>
+        <parameter name="p4" type="java.lang.String">
+        </parameter>
+        <parameter name="p5" type="boolean">
+        </parameter>
+        <parameter name="p6" type="ru.tinkoff.acquiring.sdk.Language">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="init" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.Money">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+        <parameter name="p3" type="java.lang.String">
+        </parameter>
+        <parameter name="p4" type="java.lang.String">
+        </parameter>
+        <parameter name="p5" type="boolean">
+        </parameter>
+        <parameter name="p6" type="ru.tinkoff.acquiring.sdk.Language">
+        </parameter>
+        <parameter name="p7" type="ru.tinkoff.acquiring.sdk.PayType">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="removeCard" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.RuntimeException" extends-generic-aware="java.lang.RuntimeException" final="false" name="AcquiringSdkException" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="AcquiringSdkException" static="false" type="ru.tinkoff.acquiring.sdk.AcquiringSdkException" visibility="public">
+        <parameter name="p0" type="java.lang.Throwable">
+        </parameter>
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Card" static="false" visibility="public">
+      <implements name="java.io.Serializable" name-generic-aware="java.io.Serializable">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="Card" static="false" type="ru.tinkoff.acquiring.sdk.Card" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPan" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getRebillId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="ru.tinkoff.acquiring.sdk.CardStatus" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCardId" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setPan" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setRebillId" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setStatus" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.CardStatus">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CardData" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="CardData" static="false" type="ru.tinkoff.acquiring.sdk.CardData" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="CardData" static="false" type="ru.tinkoff.acquiring.sdk.CardData" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encode" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.security.PublicKey">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getExpiryDate" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPan" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSecurityCode" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setExpiryDate" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setPan" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSecurityCode" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;ru.tinkoff.acquiring.sdk.CardStatus&gt;" final="true" name="CardStatus" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="fromChar" native="false" return="ru.tinkoff.acquiring.sdk.CardStatus" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="char">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="ru.tinkoff.acquiring.sdk.CardStatus" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="ru.tinkoff.acquiring.sdk.CardStatus[]" static="true" synchronized="false" visibility="public">
+      </method>
+      <field deprecated="not deprecated" final="true" name="ACTIVE" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.CardStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.CardStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DELETED" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.CardStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.CardStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="INACTIVE" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.CardStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.CardStatus" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CryptoUtils" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="CryptoUtils" static="false" type="ru.tinkoff.acquiring.sdk.CryptoUtils" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encodeBase64" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="byte[]">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encryptRsa" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.security.PublicKey">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="sha256" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="JavaLogger" static="false" visibility="">
+      <implements name="ru.tinkoff.acquiring.sdk.Logger" name-generic-aware="ru.tinkoff.acquiring.sdk.Logger">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="log" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.CharSequence">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="log" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Throwable">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Journal" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Journal" static="false" type="ru.tinkoff.acquiring.sdk.Journal" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isDebug" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="log" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.CharSequence">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="log" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Throwable">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setDebug" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setLogger" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.Logger">
+        </parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="KeyCreator" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="create" native="false" return="java.security.PublicKey" static="false" synchronized="false" visibility="public">
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;ru.tinkoff.acquiring.sdk.Language&gt;" final="true" name="Language" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="ru.tinkoff.acquiring.sdk.Language" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="ru.tinkoff.acquiring.sdk.Language[]" static="true" synchronized="false" visibility="public">
+      </method>
+      <field deprecated="not deprecated" final="true" name="ENGLISH" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.Language" type-generic-aware="ru.tinkoff.acquiring.sdk.Language" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="RUSSIAN" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.Language" type-generic-aware="ru.tinkoff.acquiring.sdk.Language" visibility="public" volatile="false">
+      </field>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="Logger" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="log" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.CharSequence">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="log" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Throwable">
+        </parameter>
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Money" static="false" visibility="public">
+      <implements name="java.io.Serializable" name-generic-aware="java.io.Serializable">
+      </implements>
+      <implements name="java.lang.Comparable" name-generic-aware="java.lang.Comparable&lt;ru.tinkoff.acquiring.sdk.Money&gt;">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="Money" static="false" type="ru.tinkoff.acquiring.sdk.Money" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="compareTo" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.Money">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCoins" native="false" return="long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getIntegralDivider" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getIntegralFractionDivider" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="ofCoins" native="false" return="ru.tinkoff.acquiring.sdk.Money" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="ofRubles" native="false" return="ru.tinkoff.acquiring.sdk.Money" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="double">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="ofRubles" native="false" return="ru.tinkoff.acquiring.sdk.Money" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.math.BigDecimal">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="ofRubles" native="false" return="ru.tinkoff.acquiring.sdk.Money" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setIntegralDivider" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setIntegralFractionDivider" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="toHumanReadableString" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <field deprecated="not deprecated" final="true" name="DEFAULT_INT_DIVIDER" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot; &quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DEFAULT_INT_FRACT_DIVIDER" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;,&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" final="false" name="NetworkException" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="NetworkException" static="false" type="ru.tinkoff.acquiring.sdk.NetworkException" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="NetworkException" static="false" type="ru.tinkoff.acquiring.sdk.NetworkException" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.Throwable">
+        </parameter>
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;ru.tinkoff.acquiring.sdk.PayType&gt;" final="true" name="PayType" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="ru.tinkoff.acquiring.sdk.PayType" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="ru.tinkoff.acquiring.sdk.PayType[]" static="true" synchronized="false" visibility="public">
+      </method>
+      <field deprecated="not deprecated" final="true" name="ONE_STEP" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PayType" type-generic-aware="ru.tinkoff.acquiring.sdk.PayType" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="TWO_STEP" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PayType" type-generic-aware="ru.tinkoff.acquiring.sdk.PayType" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PaymentInfo" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="PaymentInfo" static="false" type="ru.tinkoff.acquiring.sdk.PaymentInfo" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.Long">
+        </parameter>
+        <parameter name="p2" type="java.lang.Long">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAmount" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOrderId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPaymentId" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;ru.tinkoff.acquiring.sdk.PaymentStatus&gt;" final="true" name="PaymentStatus" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="fromString" native="false" return="ru.tinkoff.acquiring.sdk.PaymentStatus" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="ru.tinkoff.acquiring.sdk.PaymentStatus" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="ru.tinkoff.acquiring.sdk.PaymentStatus[]" static="true" synchronized="false" visibility="public">
+      </method>
+      <field deprecated="not deprecated" final="true" name="AUTHORIZED" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="AUTHORIZING" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="CANCELLED" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="CONFIRMED" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="CONFIRMING" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="FORMSHOWED" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="NEW" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="PREAUTHORIZING" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REFUNDED" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REFUNDING" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REJECTED" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REVERSED" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REVERSING" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="THREE_DS_CHECKED" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="THREE_DS_CHECKING" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="UNKNOWN" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.PaymentStatus" type-generic-aware="ru.tinkoff.acquiring.sdk.PaymentStatus" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="StringKeyCreator" static="false" visibility="public">
+      <implements name="ru.tinkoff.acquiring.sdk.KeyCreator" name-generic-aware="ru.tinkoff.acquiring.sdk.KeyCreator">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="StringKeyCreator" static="false" type="ru.tinkoff.acquiring.sdk.StringKeyCreator" visibility="public">
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="StringKeyCreator" static="false" type="ru.tinkoff.acquiring.sdk.StringKeyCreator" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="create" native="false" return="java.security.PublicKey" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSource" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ThreeDsData" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="ThreeDsData" static="false" type="ru.tinkoff.acquiring.sdk.ThreeDsData" visibility="public">
+        <parameter name="p0" type="java.lang.Long">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.Long">
+        </parameter>
+        <parameter name="p3" type="java.lang.String">
+        </parameter>
+        <parameter name="p4" type="java.lang.String">
+        </parameter>
+        <parameter name="p5" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAcsUrl" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAmount" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMd" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOrderId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPaReq" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPaymentId" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isThreeDsNeed" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <field deprecated="not deprecated" final="true" name="EMPTY_THREE_DS_DATA" static="true" transient="false" type="ru.tinkoff.acquiring.sdk.ThreeDsData" type-generic-aware="ru.tinkoff.acquiring.sdk.ThreeDsData" visibility="public" volatile="false">
+      </field>
+    </class>
+  </package>
+  <package name="ru.tinkoff.acquiring.sdk.requests">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AcquiringRequest" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="asMap" native="false" return="java.util.Map&lt;java.lang.String, java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getApiMethod" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTerminalKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getToken" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTokenIgnoreFields" native="false" return="java.util.Set&lt;java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="putIfNotNull" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="AMOUNT" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;Amount&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="CARD_DATA" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;CardData&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="CARD_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;CardId&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="CUSTOMER_KEY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;CustomerKey&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="CVV" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;CVV&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DATA_KEY_EMAIL" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;Email&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DESCRIPTION" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;Description&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="EMAIL" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;InfoEmail&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="LANGUAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;Language&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="ORDER_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;OrderId&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="PAYMENT_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;PaymentId&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="PAY_FORM" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;PayForm&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="PAY_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;PayType&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REBILL_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;RebillId&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="RECURRENT" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;Recurrent&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="SEND_EMAIL" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;SendEmail&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="TERMINAL_KEY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;TerminalKey&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="TOKEN" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;Token&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AcquiringRequestBuilder" static="false" visibility="">
+      <typeParameters>
+        <typeParameter name="R">
+          <genericConstraints>
+            <genericConstraint type="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" />
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <method abstract="false" deprecated="not deprecated" final="false" name="build" native="false" return="R" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getRequest" native="false" return="R" static="false" synchronized="false" visibility="protected">
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="validate" native="false" return="void" static="false" synchronized="false" visibility="protected">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="validateNonEmpty" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="validateNonNull" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="java.lang.Object">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="validateZeroOrPositive" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="java.lang.Long">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" extends-generic-aware="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" final="true" name="ChargeRequest" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="ChargeRequest" static="false" type="ru.tinkoff.acquiring.sdk.requests.ChargeRequest" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPaymentId" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getRebillId" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" extends-generic-aware="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" final="true" name="FinishAuthorizeRequest" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="FinishAuthorizeRequest" static="false" type="ru.tinkoff.acquiring.sdk.requests.FinishAuthorizeRequest" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardData" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCvv" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getEmail" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPaymentId" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSendEmail" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setEmail" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" extends-generic-aware="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" final="true" name="GetCardListRequest" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="GetCardListRequest" static="false" type="ru.tinkoff.acquiring.sdk.requests.GetCardListRequest" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCustomerKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" extends-generic-aware="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" final="true" name="GetStateRequest" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="GetStateRequest" static="false" type="ru.tinkoff.acquiring.sdk.requests.GetStateRequest" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPaymentId" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" extends-generic-aware="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" final="true" name="InitRequest" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="InitRequest" static="false" type="ru.tinkoff.acquiring.sdk.requests.InitRequest" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAmount" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCustomerKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDescription" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLanguage" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOrderId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPayForm" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPayType" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isReccurent" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setPayType" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" extends-generic-aware="ru.tinkoff.acquiring.sdk.requests.AcquiringRequest" final="true" name="RemoveCardRequest" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="RemoveCardRequest" static="false" type="ru.tinkoff.acquiring.sdk.requests.RemoveCardRequest" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCustomerKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+  </package>
+  <package name="ru.tinkoff.acquiring.sdk.responses">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AcquiringResponse" static="false" visibility="public">
+      <implements name="java.io.Serializable" name-generic-aware="java.io.Serializable">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="AcquiringResponse" static="false" type="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" visibility="public">
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="AcquiringResponse" static="false" type="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" visibility="protected">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="boolean">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDetails" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getErrorCode" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMessage" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTerminalKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isSuccess" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" extends-generic-aware="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" final="true" name="ChargeResponse" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="ChargeResponse" static="false" type="ru.tinkoff.acquiring.sdk.responses.ChargeResponse" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAmount" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOrderId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPaymentId" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPaymentInfo" native="false" return="ru.tinkoff.acquiring.sdk.PaymentInfo" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="ru.tinkoff.acquiring.sdk.PaymentStatus" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" extends-generic-aware="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" final="true" name="FinishAuthorizeResponse" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="FinishAuthorizeResponse" static="false" type="ru.tinkoff.acquiring.sdk.responses.FinishAuthorizeResponse" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAcsUrl" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAmount" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMd" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOrderId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPaReq" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPaymentId" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="ru.tinkoff.acquiring.sdk.PaymentStatus" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getThreeDsData" native="false" return="ru.tinkoff.acquiring.sdk.ThreeDsData" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" extends-generic-aware="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" final="true" name="GetCardListResponse" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="GetCardListResponse" static="false" type="ru.tinkoff.acquiring.sdk.responses.GetCardListResponse" visibility="public">
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="GetCardListResponse" static="false" type="ru.tinkoff.acquiring.sdk.responses.GetCardListResponse" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.Card[]">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCard" native="false" return="ru.tinkoff.acquiring.sdk.Card[]" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" extends-generic-aware="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" final="true" name="GetStateResponse" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="GetStateResponse" static="false" type="ru.tinkoff.acquiring.sdk.responses.GetStateResponse" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOrderId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPaymentId" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="ru.tinkoff.acquiring.sdk.PaymentStatus" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" extends-generic-aware="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" final="true" name="InitResponse" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="InitResponse" static="false" type="ru.tinkoff.acquiring.sdk.responses.InitResponse" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAmount" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOrderId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPaymentId" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="ru.tinkoff.acquiring.sdk.PaymentStatus" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" extends-generic-aware="ru.tinkoff.acquiring.sdk.responses.AcquiringResponse" final="true" name="RemoveCardResponse" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="RemoveCardResponse" static="false" type="ru.tinkoff.acquiring.sdk.responses.RemoveCardResponse" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardId" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCustomerKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="ru.tinkoff.acquiring.sdk.CardStatus" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+  </package>
+  <package name="ru.tinkoff.acquiring.sdk.utils">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Base64" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="decode" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="byte[]">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="decode" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="byte[]">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="decode" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encode" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="byte[]">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encode" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="byte[]">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encodeToString" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="byte[]">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encodeToString" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="byte[]">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="CRLF" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DEFAULT" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="NO_CLOSE" static="true" transient="false" type="int" type-generic-aware="int" value="16" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="NO_PADDING" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="NO_WRAP" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="URL_SAFE" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Base64.Coder" static="true" visibility="">
+      <method abstract="true" deprecated="not deprecated" final="false" name="maxOutputSize" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="process" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="byte[]">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="boolean">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="false" name="op" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="false" name="output" static="false" transient="false" type="byte[]" type-generic-aware="byte[]" value="null" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.utils.Base64.Coder" extends-generic-aware="ru.tinkoff.acquiring.sdk.utils.Base64.Coder" final="false" name="Base64.Decoder" static="true" visibility="">
+      <constructor deprecated="not deprecated" final="false" name="Base64.Decoder" static="false" type="ru.tinkoff.acquiring.sdk.utils.Base64.Decoder" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+        <parameter name="p1" type="byte[]">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="maxOutputSize" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="process" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="byte[]">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="boolean">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.utils.Base64.Coder" extends-generic-aware="ru.tinkoff.acquiring.sdk.utils.Base64.Coder" final="false" name="Base64.Encoder" static="true" visibility="">
+      <constructor deprecated="not deprecated" final="false" name="Base64.Encoder" static="false" type="ru.tinkoff.acquiring.sdk.utils.Base64.Encoder" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+        <parameter name="p1" type="byte[]">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="maxOutputSize" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="process" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="byte[]">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="boolean">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="LINE_GROUPS" static="true" transient="false" type="int" type-generic-aware="int" value="19" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="do_cr" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="do_newline" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="do_padding" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CardValidator" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="CardValidator" static="false" type="ru.tinkoff.acquiring.sdk.utils.CardValidator" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="validateExpirationDate" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="validateNumber" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="validateSecurityCode" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CardValidator.RegexpValidator" static="true" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="CardValidator.RegexpValidator" static="false" type="ru.tinkoff.acquiring.sdk.utils.CardValidator.RegexpValidator" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="validate" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.CharSequence">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+  </package>
+</api>

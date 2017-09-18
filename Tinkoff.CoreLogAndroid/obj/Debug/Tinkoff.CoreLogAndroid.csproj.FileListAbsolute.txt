@@ -1,0 +1,8 @@
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreLogAndroid\bin\Debug\Tinkoff.CoreLogAndroid.dll
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreLogAndroid\bin\Debug\Tinkoff.CoreLogAndroid.pdb
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreLogAndroid\bin\Debug\Tinkoff.CoreLog.dll
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreLogAndroid\bin\Debug\Tinkoff.CoreLog.pdb
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreLogAndroid\obj\Debug\Tinkoff.CoreLogAndroid.csprojResolveAssemblyReference.cache
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreLogAndroid\obj\Debug\Tinkoff.CoreLogAndroid.csproj.CoreCompileInputs.cache
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreLogAndroid\obj\Debug\Tinkoff.CoreLogAndroid.dll
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreLogAndroid\obj\Debug\Tinkoff.CoreLogAndroid.pdb

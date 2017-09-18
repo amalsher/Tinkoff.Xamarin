@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <ManifestDocuments />
+  <NativeLibraries />
+  <Jars>
+    <Jar>obj\Debug\__library_projects__\Tinkoff.CoreLog\library_project_imports\core-log-3.0.13.jar</Jar>
+  </Jars>
+</Paths>

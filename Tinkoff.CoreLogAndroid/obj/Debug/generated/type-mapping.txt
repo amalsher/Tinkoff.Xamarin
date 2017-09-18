@@ -1,0 +1,11 @@
+ru/tinkoff/core/log/BuildConfig = RU.Tinkoff.Core.Log.BuildConfig
+  <init>()V = .ctor()
+  APPLICATION_ID = ApplicationId
+  BUILD_TYPE = BuildType
+  DEBUG = Debug
+  FLAVOR = Flavor
+  VERSION_CODE = VersionCode
+  VERSION_NAME = VersionName
+ru/tinkoff/core/log/internal/AndroidLogger = RU.Tinkoff.Core.Log.Internal.AndroidLogger
+  <init>()V = .ctor()
+  log(ILjava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;)V = Log(int, Java.Lang.Throwable, string, string)

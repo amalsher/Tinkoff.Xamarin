@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="acq_scan_types">
+        <item>Scan with camera</item>
+        <item>Scan with NFC</item>
+    </string-array>
+    <attr format="integer" name="acqAccentTextStyle"/>
+    <attr format="integer" name="acqButtonStyle"/>
+    <attr format="integer" name="acqCardIcons"/>
+    <attr format="dimension" name="acqContentBlockDivider"/>
+    <attr format="integer" name="acqContentViewStyle"/>
+    <attr format="integer" name="acqEditTextStyle"/>
+    <attr format="integer" name="acqItemsDividerStyle"/>
+    <attr format="integer" name="acqItemsStyle"/>
+    <attr format="reference" name="acqMaestroIcon"/>
+    <attr format="reference" name="acqMasterCardIcon"/>
+    <attr format="reference" name="acqMirIcon"/>
+    <attr format="string" name="acqPayFormTitle"/>
+    <attr format="integer" name="acqPriceLayoutStyle"/>
+    <attr format="integer" name="acqTextViewStyle"/>
+    <attr format="integer" name="acqTitleTextViewStyle"/>
+    <attr format="dimension" name="acqViewDivider"/>
+    <attr format="reference" name="acqVisaIcon"/>
+    <color name="acq_colorButton">#ffdd2d</color>
+    <color name="acq_colorButtonDisable">#cccccc</color>
+    <color name="acq_colorButtonPressed">#55ffdd2d</color>
+    <color name="acq_colorButtonText">#009ecf</color>
+    <color name="acq_colorCardText">#333333</color>
+    <color name="acq_colorCursor">#004eff</color>
+    <color name="acq_colorDescription">#9299a2</color>
+    <color name="acq_colorKeyCircle">#2CFFFFFF</color>
+    <color name="acq_colorKeyText">#FFFFFF</color>
+    <color name="acq_colorKeyboardBackground">@color/acq_colorMain</color>
+    <color name="acq_colorListItem">#f8a4acb6</color>
+    <color name="acq_colorMain">#3e4757</color>
+    <color name="acq_colorNfcBackground">@color/acq_colorMain</color>
+    <color name="acq_colorNfcTint">#FFFFFF</color>
+    <color name="acq_colorNfcTintPressed">#8CFFFFFF</color>
+    <color name="acq_colorPrice">#f6f7f8</color>
+    <color name="acq_colorTitle">#333333</color>
+    <declare-styleable name="EditCardView"><attr format="string" name="numberHint"/><attr format="string" name="dateHint"/><attr format="string" name="cvcHint"/></declare-styleable>
+    <declare-styleable name="KeyView"><attr format="string" name="keyText"/><attr format="reference" name="keyImage"/><attr format="integer" name="keyCode"/><attr format="dimension" name="keyTextSize"/><attr format="string" name="keyTextFontFamily"/></declare-styleable>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="acq_btn_close">Close</string>
+    <string name="acq_cant_delete_card_message">Unable to remove the card, try again later</string>
+    <string name="acq_card_number_hint">PAN</string>
+    <string name="acq_change_card_label">Change</string>
+    <string name="acq_cvc_hint">CVC</string>
+    <string name="acq_default_error_message">Something went wrong</string>
+    <string name="acq_default_error_title">Error</string>
+    <string name="acq_delete_label">Delete</string>
+    <string name="acq_dialog_dismiss_btn">OK</string>
+    <string name="acq_email_hint">E-mail for receipt</string>
+    <string name="acq_enter_new_card_label">Add new card</string>
+    <string name="acq_exp_date_hint">MM/YY</string>
+    <string name="acq_invalid_card">Invalid card data</string>
+    <string name="acq_invalid_email">Invalid e-mail</string>
+    <string name="acq_money_label">Amount:</string>
+    <string name="acq_network_error_message">Probably the Internet connection is interrupted, try again later</string>
+    <string name="acq_new_card_label">New card</string>
+    <string name="acq_nfc_description">Bring the card to the back of the phone</string>
+    <string name="acq_nfc_need_enable">Turn on NFC to scan a card</string>
+    <string name="acq_nfc_scan_failed">Failed to scan a card</string>
+    <string name="acq_pay">Pay</string>
+    <string name="acq_progress_dialog_text">Payment…</string>
+    <string name="acq_saved_card_label">Linked card</string>
+    <string name="acq_screen_title">Payment</string>
+    <string name="app_name">Sdk</string>
+    <style name="AcquiringAccentTextStyle" parent="AcquiringTitleStyle">
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+    <style name="AcquiringButtonStyle" parent="Base.TextAppearance.AppCompat.Widget.Button">
+        <item name="android:background">@drawable/acq_button_bg</item>
+    </style>
+    <style name="AcquiringCardSystemsIcons">
+        <item name="acqMaestroIcon">@drawable/acq_maestro</item>
+        <item name="acqVisaIcon">@drawable/acq_visalogo</item>
+        <item name="acqMasterCardIcon">@drawable/acq_master</item>
+        <item name="acqMirIcon">@drawable/acq_mirlogo</item>
+    </style>
+    <style name="AcquiringContentView">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+    <style name="AcquiringDescriptionStyle">
+        <item name="android:textColor">@color/acq_colorDescription</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="AcquiringFieldStyle" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/acq_colorTitle</item>
+        <item name="android:textColorHint">@color/acq_colorDescription</item>
+        <item name="android:background">@drawable/acq_edit_text_bg</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+    <style name="AcquiringItemsDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/acq_colorDescription</item>
+    </style>
+    <style name="AcquiringListItems">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/acq_list_item_bg</item>
+    </style>
+    <style name="AcquiringNfcDescriptionTextStyle">
+        <item name="android:textColor">@drawable/acq_nfc_tint_color_pressable</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="AcquiringNfcTheme" parent="AcquiringTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="AcquiringPriceLayoutStyle">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="AcquiringTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/acq_colorMain</item>
+        <item name="colorPrimaryDark">@color/acq_colorMain</item>
+        <item name="colorAccent">@color/acq_colorButtonText</item>
+        <item name="acqTitleTextViewStyle">@style/AcquiringTitleStyle</item>
+        <item name="acqTextViewStyle">@style/AcquiringDescriptionStyle</item>
+        <item name="acqEditTextStyle">@style/AcquiringFieldStyle</item>
+        <item name="acqContentViewStyle">@style/AcquiringContentView</item>
+        <item name="acqButtonStyle">@style/AcquiringButtonStyle</item>
+        <item name="acqAccentTextStyle">@style/AcquiringAccentTextStyle</item>
+        <item name="acqItemsStyle">@style/AcquiringListItems</item>
+        <item name="acqItemsDividerStyle">@style/AcquiringItemsDivider</item>
+        <item name="acqPriceLayoutStyle">@style/AcquiringPriceLayoutStyle</item>
+        <item name="acqViewDivider">16dp</item>
+        <item name="acqContentBlockDivider">20dp</item>
+        <item name="acqPayFormTitle">@string/acq_screen_title</item>
+        <item name="acqCardIcons">@style/AcquiringCardSystemsIcons</item>
+    </style>
+    <style name="AcquiringTitleStyle">
+        <item name="android:textColor">@color/acq_colorTitle</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+
+    </style>
+</resources>

@@ -1,0 +1,20 @@
+﻿<metadata>
+  <remove-node path="/api/package[@name='ru.tinkoff.acquiring.sdk']/class[@name='CardStatusSerializer']" />
+  <remove-node path="/api/package[@name='ru.tinkoff.acquiring.sdk']/class[@name='PaymentStatusSerializer']" />
+  <remove-node path="/api/package[@name='ru.tinkoff.acquiring.sdk.requests']/class[@name='ChargeRequestBuilder']" />
+  <remove-node path="/api/package[@name='ru.tinkoff.acquiring.sdk.requests']/class[@name='GetCardListRequestBuilder']" />
+  <remove-node path="/api/package[@name='ru.tinkoff.acquiring.sdk']/class[@name='CardsListDeserializer']" />
+  <remove-node path="/api/package[@name='ru.tinkoff.acquiring.sdk.requests']/class[@name='GetCardListRequestBuilder']" />
+  <remove-node path="/api/package[@name='ru.tinkoff.acquiring.sdk.requests']/class[@name='FinishAuthorizeRequestBuilder']" />
+  <remove-node path="/api/package[@name='ru.tinkoff.acquiring.sdk.requests']/class[@name='GetstateRequestBuilder']" />
+  <remove-node path="/api/package[@name='ru.tinkoff.acquiring.sdk.requests']/class[@name='RemoveCardRequestBuilder']" />
+  <remove-node path="/api/package[@name='ru.tinkoff.acquiring.sdk.requests']/class[@name='InitRequestBuilder']" />
+  
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+</metadata>

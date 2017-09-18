@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25</DefineConstants>
+  </PropertyGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.AcquiringApi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.AcquiringApiException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.AcquiringSdk.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.AcquiringSdkException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Card.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.CardData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.CardStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.CryptoUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.IKeyCreator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.ILogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Journal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Language.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Money.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.NetworkException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.PaymentInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.PaymentStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.PayType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Requests.AcquiringRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Requests.ChargeRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Requests.FinishAuthorizeRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Requests.GetCardListRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Requests.GetStateRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Requests.InitRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Requests.RemoveCardRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Responses.AcquiringResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Responses.ChargeResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Responses.FinishAuthorizeResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Responses.GetCardListResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Responses.GetStateResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Responses.InitResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Responses.RemoveCardResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.StringKeyCreator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.ThreeDsData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Utils.Base64.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\RU.Tinkoff.Acquiring.Sdk.Utils.CardValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <!-- Enums -->
+  <ItemGroup />
+</Project>

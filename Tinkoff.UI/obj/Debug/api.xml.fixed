@@ -1,0 +1,1227 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+  <package name="ru.tinkoff.acquiring.sdk">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BuildConfig" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="BuildConfig" static="false" type="ru.tinkoff.acquiring.sdk.BuildConfig" visibility="public">
+      </constructor>
+      <field deprecated="not deprecated" final="true" name="APPLICATION_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ru.tinkoff.acquiring.sdk&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="BUILD_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DEBUG" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="FLAVOR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="VERSION_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="VERSION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;1.1.2&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.support.v4.app.Fragment" extends-generic-aware="android.support.v4.app.Fragment" final="false" name="CardListFragment" static="false" visibility="public">
+      <implements name="android.widget.AdapterView.OnItemClickListener" name-generic-aware="android.widget.AdapterView.OnItemClickListener">
+      </implements>
+      <implements name="android.widget.AdapterView.OnItemLongClickListener" name-generic-aware="android.widget.AdapterView.OnItemLongClickListener">
+      </implements>
+      <implements name="ru.tinkoff.acquiring.sdk.ICardInterest" name-generic-aware="ru.tinkoff.acquiring.sdk.ICardInterest">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="CardListFragment" static="false" type="ru.tinkoff.acquiring.sdk.CardListFragment" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCardReady" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onItemClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.widget.AdapterView&lt;?&gt;">
+        </parameter>
+        <parameter name="p1" type="android.view.View">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onItemLongClick" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.widget.AdapterView&lt;?&gt;">
+        </parameter>
+        <parameter name="p1" type="android.view.View">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="long">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="false" name="EXTRA_CUSTOMER_KEY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CardListFragment.1" static="true" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CardListFragment.CardLongPressCallback" static="false" visibility="">
+      <implements name="android.support.v7.view.ActionMode.Callback" name-generic-aware="android.support.v7.view.ActionMode.Callback">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onActionItemClicked" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.support.v7.view.ActionMode">
+        </parameter>
+        <parameter name="p1" type="android.view.MenuItem">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCreateActionMode" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.support.v7.view.ActionMode">
+        </parameter>
+        <parameter name="p1" type="android.view.Menu">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onDestroyActionMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.support.v7.view.ActionMode">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPrepareActionMode" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.support.v7.view.ActionMode">
+        </parameter>
+        <parameter name="p1" type="android.view.Menu">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.widget.BaseAdapter" extends-generic-aware="android.widget.BaseAdapter" final="false" name="CardListFragment.CardsAdapter" static="true" visibility="">
+      <constructor deprecated="not deprecated" final="false" name="CardListFragment.CardsAdapter" static="false" type="ru.tinkoff.acquiring.sdk.CardListFragment.CardsAdapter" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCount" native="false" return="int" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getItem" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getItemId" native="false" return="long" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getView" native="false" return="android.view.View" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+        <parameter name="p1" type="android.view.View">
+        </parameter>
+        <parameter name="p2" type="android.view.ViewGroup">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCards" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.Card[]">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSelectedItemPosition" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CardListFragment.Item" static="true" visibility="">
+      <constructor deprecated="not deprecated" final="false" name="CardListFragment.Item" static="false" type="ru.tinkoff.acquiring.sdk.CardListFragment.Item" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="CardListFragment.Item" static="false" type="ru.tinkoff.acquiring.sdk.CardListFragment.Item" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.Card">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="CardListFragment.Item" static="false" type="ru.tinkoff.acquiring.sdk.CardListFragment.Item" visibility="public">
+      </constructor>
+      <field deprecated="not deprecated" final="true" name="CARD" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="EMPTY" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="NEW_CARD" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="TYPE_COUNT" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CardLogoCache" static="false" visibility="">
+      <constructor deprecated="not deprecated" final="false" name="CardLogoCache" static="false" type="ru.tinkoff.acquiring.sdk.CardLogoCache" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="CardLogoCache" static="false" type="ru.tinkoff.acquiring.sdk.CardLogoCache" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLogoByNumber" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setMaestroId" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setMasterCardId" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setMirId" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setVisaId" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CardManager" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="CardManager" static="false" type="ru.tinkoff.acquiring.sdk.CardManager" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.AcquiringSdk">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clear" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardById" native="false" return="ru.tinkoff.acquiring.sdk.Card" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCards" native="false" return="ru.tinkoff.acquiring.sdk.Card[]" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CardsArrayBundlePacker" static="false" visibility="">
+      <implements name="ru.tinkoff.acquiring.sdk.IBundlePacker" name-generic-aware="ru.tinkoff.acquiring.sdk.IBundlePacker&lt;ru.tinkoff.acquiring.sdk.Card[]&gt;">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="pack" native="false" return="android.os.Bundle" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Object">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="pack" native="false" return="android.os.Bundle" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.Card[]">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="unpack" native="false" return="ru.tinkoff.acquiring.sdk.Card[]" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Bundle">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DefaultKeyCreator" static="false" visibility="public">
+      <implements name="ru.tinkoff.acquiring.sdk.KeyCreator" name-generic-aware="ru.tinkoff.acquiring.sdk.KeyCreator">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="DefaultKeyCreator" static="false" type="ru.tinkoff.acquiring.sdk.DefaultKeyCreator" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="create" native="false" return="java.security.PublicKey" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DialogsManager" static="false" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DialogsManager.1" static="false" visibility="">
+      <implements name="android.content.DialogInterface.OnClickListener" name-generic-aware="android.content.DialogInterface.OnClickListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.DialogInterface">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EnterCardFragment.1" static="false" visibility="">
+      <implements name="android.view.View.OnClickListener" name-generic-aware="android.view.View.OnClickListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.View">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EnterCardFragment.2" static="false" visibility="">
+      <implements name="android.view.View.OnClickListener" name-generic-aware="android.view.View.OnClickListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.View">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EnterCardFragment.3" static="false" visibility="">
+      <implements name="android.content.DialogInterface.OnClickListener" name-generic-aware="android.content.DialogInterface.OnClickListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.DialogInterface">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EnterCardFragment.4" static="true" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EnterCardFragment.5" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.ThemeCardLogoCache" extends-generic-aware="ru.tinkoff.acquiring.sdk.ThemeCardLogoCache" final="false" name="EnterCardFragment.CardSystemIconsHolderImpl" static="true" visibility="">
+      <implements name="ru.tinkoff.acquiring.sdk.views.EditCardView.CardSystemIconsHolder" name-generic-aware="ru.tinkoff.acquiring.sdk.views.EditCardView.CardSystemIconsHolder">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="EnterCardFragment.CardSystemIconsHolderImpl" static="false" type="ru.tinkoff.acquiring.sdk.EnterCardFragment.CardSystemIconsHolderImpl" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardSystemBitmap" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="FragmentsCommunicator" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="getResult" native="false" return="android.os.Bundle" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCreate" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Bundle">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onSavedInstanceState" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Bundle">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setPendingResult" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+        <parameter name="p1" type="android.os.Bundle">
+        </parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="FragmentsCommunicator.IFragmentManagerExtender" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="android.util.SparseArray" extends-generic-aware="android.util.SparseArray&lt;android.os.Bundle&gt;" final="false" name="FragmentsCommunicator.PendingResults" static="true" visibility="public">
+      <implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="FragmentsCommunicator.PendingResults" static="false" type="ru.tinkoff.acquiring.sdk.FragmentsCommunicator.PendingResults" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="writeToParcel" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="CREATOR" static="true" transient="false" type="android.os.Parcelable.Creator" type-generic-aware="android.os.Parcelable.Creator&lt;ru.tinkoff.acquiring.sdk.FragmentsCommunicator.PendingResults&gt;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="FragmentsCommunicator.PendingResults.1" static="true" visibility="">
+      <implements name="android.os.Parcelable.Creator" name-generic-aware="android.os.Parcelable.Creator&lt;ru.tinkoff.acquiring.sdk.FragmentsCommunicator.PendingResults&gt;">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="createFromParcel" native="false" return="ru.tinkoff.acquiring.sdk.FragmentsCommunicator.PendingResults" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="newArray" native="false" return="ru.tinkoff.acquiring.sdk.FragmentsCommunicator.PendingResults[]" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="IBundlePacker" static="false" visibility="public">
+      <typeParameters>
+        <typeParameter name="T" />
+      </typeParameters>
+      <method abstract="true" deprecated="not deprecated" final="false" name="pack" native="false" return="android.os.Bundle" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="unpack" native="false" return="T" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Bundle">
+        </parameter>
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ICardInterest" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onCardReady" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="OnBackPressedListener" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onBackPressed" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="OnPaymentListener" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onCancelled" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onError" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Exception">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onSuccess" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long">
+        </parameter>
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="android.support.v7.app.AppCompatActivity" extends-generic-aware="android.support.v7.app.AppCompatActivity" final="true" name="PayFormActivity" static="false" visibility="public">
+      <implements name="ru.tinkoff.acquiring.sdk.FragmentsCommunicator.IFragmentManagerExtender" name-generic-aware="ru.tinkoff.acquiring.sdk.FragmentsCommunicator.IFragmentManagerExtender">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="PayFormActivity" static="false" type="ru.tinkoff.acquiring.sdk.PayFormActivity" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="dispatchResult" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+        <parameter name="p1" type="android.content.Intent">
+        </parameter>
+        <parameter name="p2" type="ru.tinkoff.acquiring.sdk.OnPaymentListener">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="init" native="false" return="ru.tinkoff.acquiring.sdk.PayFormStarter" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isCardChooseEnable" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onNoNetwork" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+      <field deprecated="not deprecated" final="true" name="API_ERROR_NO_CUSTOMER" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;7&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="RESULT_ERROR" static="true" transient="false" type="int" type-generic-aware="int" value="500" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PayFormActivity.1" static="true" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PayFormActivity.2" static="false" visibility="">
+      <implements name="android.content.DialogInterface.OnClickListener" name-generic-aware="android.content.DialogInterface.OnClickListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.DialogInterface">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PayFormStarter" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="PayFormStarter" static="false" type="ru.tinkoff.acquiring.sdk.PayFormStarter" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="prepare" native="false" return="ru.tinkoff.acquiring.sdk.PayFormStarter" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.Long">
+        </parameter>
+        <parameter name="p2" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="prepare" native="false" return="ru.tinkoff.acquiring.sdk.PayFormStarter" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="ru.tinkoff.acquiring.sdk.Money">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+        <parameter name="p3" type="java.lang.String">
+        </parameter>
+        <parameter name="p4" type="java.lang.String">
+        </parameter>
+        <parameter name="p5" type="java.lang.String">
+        </parameter>
+        <parameter name="p6" type="boolean">
+        </parameter>
+        <parameter name="p7" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCustomerKey" native="false" return="ru.tinkoff.acquiring.sdk.PayFormStarter" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="startActivityForResult" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.os.Handler" extends-generic-aware="android.os.Handler" final="false" name="SdkHandler" static="false" visibility="">
+      <constructor deprecated="not deprecated" final="false" name="SdkHandler" static="false" type="ru.tinkoff.acquiring.sdk.SdkHandler" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="register" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.PayFormActivity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="unregister" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.PayFormActivity">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="CANCEL" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="CARDS_READY" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DELETE_CARD" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="EXCEPTION" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="NO_NETWORK" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="PAYMENT_INIT_COMPLETED" static="true" transient="false" type="int" type-generic-aware="int" value="7" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="SHOW_ERROR_DIALOG" static="true" transient="false" type="int" type-generic-aware="int" value="6" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="START_3DS" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="SUCCESS" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.acquiring.sdk.CardLogoCache" extends-generic-aware="ru.tinkoff.acquiring.sdk.CardLogoCache" final="false" name="ThemeCardLogoCache" static="false" visibility="">
+      <constructor deprecated="not deprecated" final="false" name="ThemeCardLogoCache" static="false" type="ru.tinkoff.acquiring.sdk.ThemeCardLogoCache" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ThreeDsBundlePacker" static="false" visibility="">
+      <implements name="ru.tinkoff.acquiring.sdk.IBundlePacker" name-generic-aware="ru.tinkoff.acquiring.sdk.IBundlePacker&lt;ru.tinkoff.acquiring.sdk.ThreeDsData&gt;">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="pack" native="false" return="android.os.Bundle" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Object">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="pack" native="false" return="android.os.Bundle" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.ThreeDsData">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="unpack" native="false" return="ru.tinkoff.acquiring.sdk.ThreeDsData" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Bundle">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.support.v4.app.Fragment" extends-generic-aware="android.support.v4.app.Fragment" final="false" name="ThreeDsFragment" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="ThreeDsFragment" static="false" type="ru.tinkoff.acquiring.sdk.ThreeDsFragment" visibility="public">
+      </constructor>
+      <field deprecated="not deprecated" final="true" name="EXTRA_3DS" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;extra_3ds&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ThreeDsFragment.1" static="true" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.webkit.WebViewClient" extends-generic-aware="android.webkit.WebViewClient" final="false" name="ThreeDsFragment.ThisWebViewClient" static="false" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Utils" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="closeAllCloseables" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Object...">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="closeCloseable" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.io.Closeable">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="closeCloseable" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.AutoCloseable">
+        </parameter>
+      </method>
+    </class>
+  </package>
+  <package name="ru.tinkoff.acquiring.sdk.nfc">
+    <class abstract="false" deprecated="not deprecated" extends="android.support.v7.app.AppCompatActivity" extends-generic-aware="android.support.v7.app.AppCompatActivity" final="false" name="NfcCardScanActivity" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="NfcCardScanActivity" static="false" type="ru.tinkoff.acquiring.sdk.nfc.NfcCardScanActivity" visibility="public">
+      </constructor>
+      <field deprecated="not deprecated" final="true" name="EXTRA_CARD" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;card_extra&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="RESULT_ERROR" static="true" transient="false" type="int" type-generic-aware="int" value="256" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="NfcCardScanActivity.1" static="false" visibility="">
+      <implements name="android.view.View.OnClickListener" name-generic-aware="android.view.View.OnClickListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.View">
+        </parameter>
+      </method>
+    </class>
+  </package>
+  <package name="ru.tinkoff.acquiring.sdk.views">
+    <class abstract="false" deprecated="not deprecated" extends="android.widget.FrameLayout" extends-generic-aware="android.widget.FrameLayout" final="false" name="BankKeyboard" static="false" visibility="public">
+      <implements name="android.view.View.OnClickListener" name-generic-aware="android.view.View.OnClickListener">
+      </implements>
+      <implements name="android.view.View.OnFocusChangeListener" name-generic-aware="android.view.View.OnFocusChangeListener">
+      </implements>
+      <implements name="android.view.View.OnLongClickListener" name-generic-aware="android.view.View.OnLongClickListener">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="BankKeyboard" static="false" type="ru.tinkoff.acquiring.sdk.views.BankKeyboard" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.util.AttributeSet">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="BankKeyboard" static="false" type="ru.tinkoff.acquiring.sdk.views.BankKeyboard" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.util.AttributeSet">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="BankKeyboard" static="false" type="ru.tinkoff.acquiring.sdk.views.BankKeyboard" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.util.AttributeSet">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="BankKeyboard" static="false" type="ru.tinkoff.acquiring.sdk.views.BankKeyboard" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="attachToView" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.View">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hide" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.View">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onFocusChange" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.View">
+        </parameter>
+        <parameter name="p1" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onLongClick" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.View">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="showFor" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.widget.EditText">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="ASCII_CODE_OF_ZERO" static="true" transient="false" type="int" type-generic-aware="int" value="48" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="CUSTOM_KEYBOARD_HIDE_DELAY_MILLIS" static="true" transient="false" type="int" type-generic-aware="int" value="50" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="KEYBOARD_ANIMATION_MILLIS" static="true" transient="false" type="int" type-generic-aware="int" value="50" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="KEYBOARD_SHOW_DELAY_MILLIS" static="true" transient="false" type="int" type-generic-aware="int" value="500" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="SYSTEM_KEYBOARD_HIDE_DELAY_MILLIS" static="true" transient="false" type="int" type-generic-aware="int" value="100" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BankKeyboard.1" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BankKeyboard.2" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BankKeyboard.3" static="false" visibility="">
+      <implements name="android.view.View.OnClickListener" name-generic-aware="android.view.View.OnClickListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.View">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BankKeyboard.4" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BankKeyboard.5" static="false" visibility="">
+      <implements name="android.animation.Animator.AnimatorListener" name-generic-aware="android.animation.Animator.AnimatorListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationCancel" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.Animator">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationEnd" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.Animator">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationRepeat" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.Animator">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationStart" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.Animator">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.view.ViewGroup" extends-generic-aware="android.view.ViewGroup" final="false" name="EditCardView" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="EditCardView" static="false" type="ru.tinkoff.acquiring.sdk.views.EditCardView" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.util.AttributeSet">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="EditCardView" static="false" type="ru.tinkoff.acquiring.sdk.views.EditCardView" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.util.AttributeSet">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="EditCardView" static="false" type="ru.tinkoff.acquiring.sdk.views.EditCardView" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="applyBehaviour" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="android.widget.EditText...">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clear" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="disableCopyPaste" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="dispatchFocus" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCardSystemLogoAnimationFactor" native="false" return="float" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCvc" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getExpireDate" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isFilledAndCorrect" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCreateField" native="false" return="android.widget.EditText" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.util.AttributeSet">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onLayout" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="boolean">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+        <parameter name="p4" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onRestoreInstanceState" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcelable">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onSaveInstanceState" native="false" return="android.os.Parcelable" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setActions" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.views.EditCardView.Actions">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setBtnScanIcon" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCardHint" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCardNumber" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCardSystemIconsHolder" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.views.EditCardView.CardSystemIconsHolder">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCardSystemLogoAnimationFactor" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="float">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setChangeModeIcon" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setExpireDate" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setFullCardNumberModeEnable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setHints" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSavedCardState" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.1" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.animation.AnimatorListenerAdapter" extends-generic-aware="android.animation.AnimatorListenerAdapter" final="false" name="EditCardView.10" static="false" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.11" static="false" visibility="">
+      <implements name="android.animation.ValueAnimator.AnimatorUpdateListener" name-generic-aware="android.animation.ValueAnimator.AnimatorUpdateListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationUpdate" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.ValueAnimator">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.animation.AnimatorListenerAdapter" extends-generic-aware="android.animation.AnimatorListenerAdapter" final="false" name="EditCardView.12" static="false" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="android.animation.AnimatorListenerAdapter" extends-generic-aware="android.animation.AnimatorListenerAdapter" final="false" name="EditCardView.13" static="false" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.14" static="false" visibility="">
+      <implements name="android.animation.ValueAnimator.AnimatorUpdateListener" name-generic-aware="android.animation.ValueAnimator.AnimatorUpdateListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationUpdate" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.ValueAnimator">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.animation.AnimatorListenerAdapter" extends-generic-aware="android.animation.AnimatorListenerAdapter" final="false" name="EditCardView.15" static="false" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="android.animation.AnimatorListenerAdapter" extends-generic-aware="android.animation.AnimatorListenerAdapter" final="false" name="EditCardView.16" static="false" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.17" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.18" static="true" visibility="">
+      <implements name="ru.tinkoff.acquiring.sdk.views.EditCardView.Actions" name-generic-aware="ru.tinkoff.acquiring.sdk.views.EditCardView.Actions">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPressScanCard" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.views.EditCardView">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onUpdate" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.views.EditCardView">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.2" static="false" visibility="">
+      <implements name="android.text.TextWatcher" name-generic-aware="android.text.TextWatcher">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="afterTextChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.text.Editable">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="beforeTextChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.CharSequence">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="countMatchesBeforeIndex" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTextChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.CharSequence">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.3" static="false" visibility="">
+      <implements name="android.view.View.OnTouchListener" name-generic-aware="android.view.View.OnTouchListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTouch" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.View">
+        </parameter>
+        <parameter name="p1" type="android.view.MotionEvent">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.4" static="false" visibility="">
+      <implements name="android.view.View.OnFocusChangeListener" name-generic-aware="android.view.View.OnFocusChangeListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onFocusChange" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.View">
+        </parameter>
+        <parameter name="p1" type="boolean">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.5" static="false" visibility="">
+      <implements name="android.text.TextWatcher" name-generic-aware="android.text.TextWatcher">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="afterTextChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.text.Editable">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="beforeTextChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.CharSequence">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTextChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.CharSequence">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.6" static="false" visibility="">
+      <implements name="android.text.TextWatcher" name-generic-aware="android.text.TextWatcher">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="afterTextChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.text.Editable">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="beforeTextChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.CharSequence">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onTextChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.CharSequence">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.7" static="false" visibility="">
+      <implements name="android.animation.ValueAnimator.AnimatorUpdateListener" name-generic-aware="android.animation.ValueAnimator.AnimatorUpdateListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationUpdate" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.ValueAnimator">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.animation.AnimatorListenerAdapter" extends-generic-aware="android.animation.AnimatorListenerAdapter" final="false" name="EditCardView.8" static="false" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.9" static="false" visibility="">
+      <implements name="android.animation.ValueAnimator.AnimatorUpdateListener" name-generic-aware="android.animation.ValueAnimator.AnimatorUpdateListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationUpdate" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.ValueAnimator">
+        </parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="EditCardView.Actions" static="true" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onPressScanCard" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.views.EditCardView">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onUpdate" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="ru.tinkoff.acquiring.sdk.views.EditCardView">
+        </parameter>
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.CardFormatter" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="EditCardView.CardFormatter" static="false" type="ru.tinkoff.acquiring.sdk.views.EditCardView.CardFormatter" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="doFormat" native="false" return="java.lang.String" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.CharSequence">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="format" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.CharSequence">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMaxLength" native="false" return="int" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getValidationRanges" native="false" return="int[]" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isLimited" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isNeedToCheck" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setType" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="DEFAULT" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="MAESTRO" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="UNKNOWN" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.widget.EditText" extends-generic-aware="android.widget.EditText" final="false" name="EditCardView.CardNumberEditText" static="true" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="EditCardView.CardNumberEditText" static="false" type="ru.tinkoff.acquiring.sdk.views.EditCardView.CardNumberEditText" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="EditCardView.CardNumberEditText" static="false" type="ru.tinkoff.acquiring.sdk.views.EditCardView.CardNumberEditText" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.util.AttributeSet">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCustomOnFocusChangedListener" native="false" return="android.view.View.OnFocusChangeListener" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMode" native="false" return="int" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAnimationFactor" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="float">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCustomOnFocusChangedListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.View.OnFocusChangeListener">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="FULL_MODE" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="SHORT_MODE" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+      </field>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="EditCardView.CardSystemIconsHolder" static="true" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="getCardSystemBitmap" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.DisableCopyPasteActionModeCallback" static="true" visibility="">
+      <implements name="android.view.ActionMode.Callback" name-generic-aware="android.view.ActionMode.Callback">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onActionItemClicked" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.ActionMode">
+        </parameter>
+        <parameter name="p1" type="android.view.MenuItem">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCreateActionMode" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.ActionMode">
+        </parameter>
+        <parameter name="p1" type="android.view.Menu">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onDestroyActionMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.ActionMode">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPrepareActionMode" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.ActionMode">
+        </parameter>
+        <parameter name="p1" type="android.view.Menu">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.text.style.CharacterStyle" extends-generic-aware="android.text.style.CharacterStyle" final="false" name="EditCardView.MutableColorSpan" static="true" visibility="">
+      <implements name="android.text.style.UpdateAppearance" name-generic-aware="android.text.style.UpdateAppearance">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="EditCardView.MutableColorSpan" static="false" type="ru.tinkoff.acquiring.sdk.views.EditCardView.MutableColorSpan" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAlpha" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="updateDrawState" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.text.TextPaint">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.view.View.BaseSavedState" extends-generic-aware="android.view.View.BaseSavedState" final="false" name="EditCardView.SavedState" static="true" visibility="">
+      <field deprecated="not deprecated" final="true" name="CREATOR" static="true" transient="false" type="android.os.Parcelable.Creator" type-generic-aware="android.os.Parcelable.Creator&lt;ru.tinkoff.acquiring.sdk.views.EditCardView.SavedState&gt;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.SavedState.1" static="true" visibility="">
+      <implements name="android.os.Parcelable.Creator" name-generic-aware="android.os.Parcelable.Creator&lt;ru.tinkoff.acquiring.sdk.views.EditCardView.SavedState&gt;">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="createFromParcel" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.os.Parcel">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="newArray" native="false" return="java.lang.Object[]" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EditCardView.SimpleButton" static="false" visibility="">
+      <constructor deprecated="not deprecated" final="false" name="EditCardView.SimpleButton" static="false" type="ru.tinkoff.acquiring.sdk.views.EditCardView.SimpleButton" visibility="public">
+        <parameter name="p1" type="android.graphics.Bitmap">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="drawWithPaint" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="android.graphics.Canvas">
+        </parameter>
+        <parameter name="p1" type="android.graphics.Paint">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getHeight" native="false" return="int" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getWidth" native="false" return="int" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isVisible" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="layoutIn" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="int">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setBitmap" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.graphics.Bitmap">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setVisibility" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.widget.EditText" extends-generic-aware="android.widget.EditText" final="false" name="FixCompatEditText" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="FixCompatEditText" static="false" type="ru.tinkoff.acquiring.sdk.views.FixCompatEditText" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="FixCompatEditText" static="false" type="ru.tinkoff.acquiring.sdk.views.FixCompatEditText" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.util.AttributeSet">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="FixCompatEditText" static="false" type="ru.tinkoff.acquiring.sdk.views.FixCompatEditText" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.util.AttributeSet">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.view.View" extends-generic-aware="android.view.View" final="false" name="KeyView" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="KeyView" static="false" type="ru.tinkoff.acquiring.sdk.views.KeyView" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.util.AttributeSet">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="KeyView" static="false" type="ru.tinkoff.acquiring.sdk.views.KeyView" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.util.AttributeSet">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="KeyView" static="false" type="ru.tinkoff.acquiring.sdk.views.KeyView" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="KeyView" static="false" type="ru.tinkoff.acquiring.sdk.views.KeyView" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.util.AttributeSet">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContentImage" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContentText" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getKeyCode" native="false" return="int" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setContentImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.graphics.Bitmap">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setContentText" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setKeyCode" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="KeyView.1" static="false" visibility="">
+      <implements name="android.animation.ValueAnimator.AnimatorUpdateListener" name-generic-aware="android.animation.ValueAnimator.AnimatorUpdateListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationUpdate" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.ValueAnimator">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="KeyView.2" static="false" visibility="">
+      <implements name="android.animation.Animator.AnimatorListener" name-generic-aware="android.animation.Animator.AnimatorListener">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationCancel" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.Animator">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationEnd" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.Animator">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationRepeat" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.Animator">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onAnimationStart" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.animation.Animator">
+        </parameter>
+      </method>
+    </class>
+  </package>
+</api>

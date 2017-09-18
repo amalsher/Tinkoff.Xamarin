@@ -1,0 +1,5 @@
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreNFC\obj\Debug\Tinkoff.CoreNFC.csproj.CoreCompileInputs.cache
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreNFC\bin\Debug\Tinkoff.CoreNFC.dll
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreNFC\bin\Debug\Tinkoff.CoreNFC.pdb
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreNFC\obj\Debug\Tinkoff.CoreNFC.dll
+C:\Users\amalsher\Desktop\Tinkoff.Xamarin\Tinkoff.CoreNFC\obj\Debug\Tinkoff.CoreNFC.pdb

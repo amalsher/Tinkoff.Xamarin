@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <ManifestDocuments>
+    <ManifestDocument>obj\Debug\__library_projects__\Tinkoff.CoreLogAndroid\library_project_imports\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Tinkoff.CoreNFC\library_project_imports\AndroidManifest.xml</ManifestDocument>
+  </ManifestDocuments>
+  <NativeLibraries />
+  <Jars>
+    <Jar>obj\Debug\__library_projects__\Tinkoff.Core\library_project_imports\core-1.1.2.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Tinkoff.CoreLog\library_project_imports\core-log-3.0.13.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Tinkoff.CoreLogAndroid\library_project_imports\bin\classes.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Tinkoff.CoreNFC\library_project_imports\bin\classes.jar</Jar>
+  </Jars>
+</Paths>

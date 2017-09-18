@@ -1,0 +1,3 @@
+com.google.gson.FieldNamingPolicy:Com.Google.Gson:FieldNamingPolicy
+com.google.gson.LongSerializationPolicy:Com.Google.Gson:LongSerializationPolicy
+com.google.gson.stream.JsonToken:Com.Google.Gson.Stream:JsonToken

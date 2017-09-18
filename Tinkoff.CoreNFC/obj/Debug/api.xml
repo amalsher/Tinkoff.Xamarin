@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+<package name="ru.tinkoff.core.nfc">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BuildConfig" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="BuildConfig" static="false" type="ru.tinkoff.core.nfc.BuildConfig" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="APPLICATION_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ru.tinkoff.core.nfc&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BUILD_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEBUG" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FLAVOR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERSION_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="-1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERSION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;3.0.13&quot;" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CardParser" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="CardParser" static="false" type="ru.tinkoff.core.nfc.CardParser" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="extractAfl" native="false" return="java.util.List&lt;ru.tinkoff.core.nfc.model.ApplicationFileLocator&gt;" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getGetProcessingOptions" native="false" return="byte[]" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="ru.tinkoff.core.nfc.connection.EmvConnection">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="parse" native="false" return="ru.tinkoff.core.nfc.model.Card" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.nfc.Tag">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</class>
+</package>
+<package name="ru.tinkoff.core.nfc.connection">
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AbstractEmvConnection" static="false" visibility="public">
+<implements name="ru.tinkoff.core.nfc.connection.EmvConnection" name-generic-aware="ru.tinkoff.core.nfc.connection.EmvConnection">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="AbstractEmvConnection" static="false" type="ru.tinkoff.core.nfc.connection.AbstractEmvConnection" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="transceive" native="false" return="byte[]" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="EmvConnection" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="transceive" native="false" return="byte[]" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="transceive" native="false" return="byte[]" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="ru.tinkoff.core.nfc.connection.AbstractEmvConnection" extends-generic-aware="ru.tinkoff.core.nfc.connection.AbstractEmvConnection" final="false" name="NfcEmvConnection" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="NfcEmvConnection" static="false" type="ru.tinkoff.core.nfc.connection.NfcEmvConnection" visibility="public">
+<parameter name="p0" type="android.nfc.Tag">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="transceive" native="false" return="byte[]" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</class>
+</package>
+<package name="ru.tinkoff.core.nfc.model">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ApplicationFileLocator" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ApplicationFileLocator" static="false" type="ru.tinkoff.core.nfc.model.ApplicationFileLocator" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getFirstRecord" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getLastRecord" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getShortFileId" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isOfflineAuthenticationAvailable" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setFirstRecord" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLastRecord" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setOfflineAuthenticationAvailable" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setShortFileId" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Card" static="false" visibility="public">
+<implements name="java.io.Serializable" name-generic-aware="java.io.Serializable">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="Card" static="false" type="ru.tinkoff.core.nfc.model.Card" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getExpirationDate" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setExpirationDate" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setNumber" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;ru.tinkoff.core.nfc.model.Command&gt;" final="true" name="Command" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="getCommandClass" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getInstruction" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getParam1" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getParam2" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="ru.tinkoff.core.nfc.model.Command" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="ru.tinkoff.core.nfc.model.Command[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="EXTRA" static="true" transient="false" type="ru.tinkoff.core.nfc.model.Command" type-generic-aware="ru.tinkoff.core.nfc.model.Command" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="GPO" static="true" transient="false" type="ru.tinkoff.core.nfc.model.Command" type-generic-aware="ru.tinkoff.core.nfc.model.Command" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="READ_RECORD" static="true" transient="false" type="ru.tinkoff.core.nfc.model.Command" type-generic-aware="ru.tinkoff.core.nfc.model.Command" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SELECT" static="true" transient="false" type="ru.tinkoff.core.nfc.model.Command" type-generic-aware="ru.tinkoff.core.nfc.model.Command" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CommandApdu" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="CommandApdu" static="false" type="ru.tinkoff.core.nfc.model.CommandApdu" visibility="public">
+<parameter name="p0" type="ru.tinkoff.core.nfc.model.Command">
+</parameter>
+<parameter name="p1" type="byte[]">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="CommandApdu" static="false" type="ru.tinkoff.core.nfc.model.CommandApdu" visibility="public">
+<parameter name="p0" type="ru.tinkoff.core.nfc.model.Command">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="toBytes" native="false" return="byte[]" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;ru.tinkoff.core.nfc.model.StatusWord&gt;" final="true" name="StatusWord" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="getDetail" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSW" native="false" return="ru.tinkoff.core.nfc.model.StatusWord" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="byte[]" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="ru.tinkoff.core.nfc.model.StatusWord" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="ru.tinkoff.core.nfc.model.StatusWord[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="SW_AUTH_METHOD_LOCKED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_CMD_ABORTED_UNKNOWN_ERR" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_CMD_CLASS_NOT_SUPPORTED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_CMD_INCOMPATIBLE" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_CMD_NOT_ALLOWED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_CMD_NOT_ALLOWED_NO_EF_SEL" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_COMMAND_NOT_ALLOWED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_DATA_FAILURE" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_FILE_END_REACHED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_FILE_INFO_ISO_FAILURE" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_FILE_LOCKED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_FILE_NOT_FOUND" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_FUNC_CLASS_BYTE_NOT_SUPPORTED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_FUNC_NOT_SUPPORTED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_INCORRECT_DATA" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_INCORRECT_PARAMETERS_P1_P2" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_INCORRECT_PARAMS" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_INS_NOT_SUPPORTED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_LENGTH_ERROR" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_LOGIC_CHAN_NOT_SUPPORTED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_MEMORY_ERROR" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_RECORD_NOT_FOUND" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_REFERENCED_DATA_LOCKED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_REFERENCED_DATA_NOT_FOUND" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_SEC_MSG_NOT_SUPPORTED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_SEC_STATE_NOT_FULFILLED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_SUCCESS" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SW_USAGE_CONDITIONS_NOT_FULFILLED" static="true" transient="false" type="ru.tinkoff.core.nfc.model.StatusWord" type-generic-aware="ru.tinkoff.core.nfc.model.StatusWord" visibility="public" volatile="false">
+</field>
+</class>
+</package>
+<package name="ru.tinkoff.core.nfc.util">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PdolUtils" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="PdolUtils" static="false" type="ru.tinkoff.core.nfc.util.PdolUtils" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="parsePDoL" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PdolUtils.RecvTag" static="true" visibility="">
+<constructor deprecated="not deprecated" final="false" name="PdolUtils.RecvTag" static="false" type="ru.tinkoff.core.nfc.util.PdolUtils.RecvTag" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="PdolUtils.RecvTag" static="false" type="ru.tinkoff.core.nfc.util.PdolUtils.RecvTag" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="byte[]">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ResponseUtils" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ResponseUtils" static="false" type="ru.tinkoff.core.nfc.util.ResponseUtils" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="isSucceed" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="TlvUtils" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="TlvUtils" static="false" type="ru.tinkoff.core.nfc.util.TlvUtils" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getArrayValue" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getHexaValue" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getIntValue" native="false" return="int" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="ADF_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;4F&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="APPLICATION_LABEL" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;50&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DF_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;84&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LOG_ENTRY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;9F 4D&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PDOL" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;9F 38&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SFI" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;88&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACK_2" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;57&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TRACK_2_MASTERCARD" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;9F 6B&quot;" visibility="public" volatile="false">
+</field>
+</class>
+</package>
+</api>

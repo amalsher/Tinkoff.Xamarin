@@ -1,0 +1,19 @@
+﻿<metadata>
+  <remove-node path="/api/package[@name='com.google.gson.internal.bind']/class[@name='CollectionTypeAdapterFactory.Adapter']" />
+  <remove-node path="/api/package[@name='com.google.gson.internal.bind']/class[@name='DateTypeAdapter']" />
+  <remove-node path="/api/package[@name='com.google.gson']/class[@name='JsonStreamParser']" />
+  <remove-node path="/api/package[@name='com.google.gson.internal.bind']/class[@name='MapTypeAdapterFactory.Adapter']" />
+  <remove-node path="/api/package[@name='com.google.gson.internal.bind']/class[@name='SqlDateTypeAdapter']" />
+  <remove-node path="/api/package[@name='com.google.gson.internal.bind']/class[@name='TimeTypeAdapter']" />
+  <remove-node path="/api/package[@name='com.google.gson.internal.bind']/class[@name='TypeAdapters.EnumTypeAdapter']/method[@name='write' and count(parameter)=2 and parameter[1][@type='com.google.gson.stream.JsonWriter'] and parameter[2][@type='java.lang.Object']]" />
+  <remove-node path="/api/package[@name='com.google.gson.internal']/class[@name='LinkedTreeMap']" />
+  <remove-node path="/api/package[@name='com.google.gson.internal']/class[@name='LinkedHashTreeMap']" />
+  
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+</metadata>
